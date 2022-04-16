@@ -1,12 +1,12 @@
 {% extends 'base.html' %} 
 {% block title %}
-  Записи сообщества {{ group }}
+  Записи сообщества {{ group.title }}
 {% endblock %}
 {% include 'includes/header.html' %}
 {% block content %}
-  <h1>{{ group }}</h1>
+  <h1>{{ group.title }}</h1>
   <p>
-    {{ group.description }}
+    {{ group.description|linebreaks }}
   </p>
   {% for post in posts %}
     {% include 'includes/post.html' %}
