@@ -13,9 +13,7 @@ class Group(models.Model):
     )
     description = models.TextField(verbose_name="Описание группы")
     slug = models.SlugField(
-        primary_key=True,   # При изменении ломается все,
-                            # я не знаю как исправить ошибки.
-                            # Оставил как есть
+        unique=True,
         verbose_name="Индетификатор группы"
     )
 
